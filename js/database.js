@@ -23,7 +23,9 @@ function obtenerMenu() {
      * - Debe convertir el string a objeto usando JSON.parse().
      * - Devuelve exclusivamente el arreglo 'menu' contenido en el objeto.
      */
-    throw new Error("Equipo: implementen obtenerMenu");
+    const db = JSON.parse(localStorage.getItem('restauranteDB'));
+    return db.menu;
+    
 }
 
 
@@ -37,5 +39,5 @@ function guardarComanda(totalOrden) {
      * - Convierte la base de datos a string con JSON.stringify().
      * - Guarda nuevamente usando localStorage.setItem().
      */
-    throw new Error("Equipo: implementen guardarComanda");
+    
 }
