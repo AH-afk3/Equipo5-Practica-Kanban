@@ -20,7 +20,10 @@ header h1 {
     border: 2px dashed #ccc;
     padding: 20px;
     margin-bottom: 20px;
-    /* Implementen sus reglas aquí */
+    /* Implementación con Grid */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
 }
 
 /* 
@@ -32,10 +35,21 @@ header h1 {
  * - Eliminar el borde negro original.
  */
 .platillo {
-    border: 1px solid black; 
-    padding: 10px;
-    margin: 5px;
-    /* Implementen sus reglas aquí */
+    /* Eliminamos el borde negro anterior y aplicamos los nuevos estilos */
+    border: none; 
+    padding: 20px;
+    margin: 0; /* Lo manejamos con el gap del grid */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto hover extra opcional para que se vea más interactivo */
+.platillo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 #resumen-orden {
